@@ -1,0 +1,7 @@
+nav h2 a, nav h2 a:visited {
+    text-decoration: none;
+}
+
+nav h2 a, nav h2 a:visited, div.hello {
+    text-decoration: none;
+}

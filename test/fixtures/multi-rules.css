@@ -1,0 +1,66 @@
+html
+{
+    overflow: auto;
+}
+
+body
+{
+	font: 14px "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #444;
+}
+
+a:visited {
+    color: #444;
+}
+
+a:active {
+    color: #444;
+}
+
+header
+{
+	display: block;
+	padding: 6px 4px;
+}
+
+.class-description {
+  font-style: italic;
+}
+
+#main {
+    float: left;
+}
+
+section
+{
+	display: block;
+}
+
+.variation {
+    display: none;
+}
+
+.optional:after {
+	font-style: italic;
+	font-weight: lighter;
+}
+
+nav
+{
+	display: block;
+}
+
+nav ul {
+    line-height: 17px;
+}
+
+nav h2 a, nav h2 a:visited {
+    text-decoration: none;
+}
+
+nav h3 {
+    margin-top: 12px;
+}
