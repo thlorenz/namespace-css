@@ -1,6 +1,6 @@
 {
   "name": "namespace-css",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Namespaces all rules found in a CSS file to make them only apply to a subset of the page.",
   "main": "index.js",
   "bin": {
