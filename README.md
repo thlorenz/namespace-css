@@ -1,4 +1,4 @@
-# namespace-css [![build status](https://secure.travis-ci.org/thlorenz/namespace-css.png)](http://travis-ci.org/thlorenz/namespace-css)
+# namespace-css [![build status](https://secure.travis-ci.org/thlorenz/namespace-css.png?branch=master)](http://travis-ci.org/thlorenz/namespace-css)
 
 Namespaces all rules found in a CSS file to make them only apply to a subset of the page.
 
