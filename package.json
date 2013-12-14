@@ -1,6 +1,6 @@
 {
   "name": "namespace-css",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Namespaces all rules found in a CSS file to make them only apply to a subset of the page.",
   "main": "index.js",
   "bin": {
@@ -23,7 +23,14 @@
   "devDependencies": {
     "tap": "~0.4.3"
   },
-  "keywords": [ "css", "namespace", "selector", "mutate", "transform", "refactor" ],
+  "keywords": [
+    "css",
+    "namespace",
+    "selector",
+    "mutate",
+    "transform",
+    "refactor"
+  ],
   "author": {
     "name": "Thorsten Lorenz",
     "email": "thlorenz@gmx.de",
