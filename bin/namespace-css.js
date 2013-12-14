@@ -21,10 +21,11 @@ var selector = argv.selector || argv.s
   , infile = argv._[0];
 
 if (argv.h || argv.help) return usage(0);
-if (!selector || !infile) return usage(1);
+if (!selector) return usage(1);
 
 var outstream = out ? fs.createWriteStream(out, 'utf8') : process.stdout;
+var instream = infile ? fs.createReadStream(infile) : process.stdin;
 
-fs.createReadStream(infile)
+instream
   .pipe(namespaceCss({ selector: selector}))
   .pipe(outstream)

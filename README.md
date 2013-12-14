@@ -3,7 +3,11 @@
 Namespaces all rules found in a CSS file to make them only apply to a subset of the page.
 
 ```
+# namespace local file
 namespace-css orig.css --selector .myclass -o namespaced.css
+
+# pipe string into it to do things like
+curl -L http://some.site.com/index.css | namespace-css -s .myclass
 ```
 
 ```js
@@ -21,9 +25,11 @@ fs.createReadStream(infile)
 ## Usage
 
 ```
-namespace-css input.css <options>
+usage: namespace-css [input.css] <options>
 
   Namespaces the css in the input file according to given options.
+
+  If no input file is given stdin is used and if no output file is given results are piped to stdout.
 
 OPTIONS:
 
