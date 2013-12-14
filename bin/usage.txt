@@ -1,0 +1,18 @@
+usage: namespace-css input.css <options>
+
+  Namespaces the css in the input file according to given options.
+
+OPTIONS:
+
+  -s, --selector  css selector (any string) under which to namespace the rule in the input file
+  -o, --out       output file to save namespaced css to (optional)
+
+EXAMPLES:
+
+  Namespace all rules in input.css under '.mynamespace' and save in output.css
+
+    namespace-css input.css -s .mynamespace -o output.css
+
+  Namespace all rules in input.css under 'article' and pipe resulting css to the terminal 
+
+    namespace-css input.css -s article

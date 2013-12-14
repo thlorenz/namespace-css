@@ -56,7 +56,17 @@ NamespaceCssTransform.prototype._flush = function (cb) {
       
 };
 
-var go = module.exports = function (file, opts) {
+/**
+ * Transforms the piped css by namespacing it to given options.
+ * 
+ * @name namespaceCss
+ * @function
+ * @param {String=} file ignored (only here to match common transform signature)
+ * @param {Options} opts 
+ * @param {String}  opts.selector the selector under which to namespace all css rules
+ * @return {TransformStream} the stream into which to pipe original css
+ */
+var go = module.exports = function namespaceCss(file, opts) {
   // allow file to stay compat with mutiny/catw/browserify transforms
   if (typeof file === 'object') {
     opts = file;
