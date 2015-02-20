@@ -34,7 +34,7 @@ test('\nsimple css with one rule', function (t) {
             '  color: \'green\';',
             '}' ]
       )
-      t.end()
+      t.end();
     })
 })
 
@@ -62,7 +62,7 @@ test('\nmultiple selectors per rule, two rules', function (t) {
             '  text-decoration: none;',
             '}' ]
       )
-      t.end()
+      t.end();
     })
 })
 
@@ -142,6 +142,20 @@ test('\nmultiple rules', function (t) {
             '  margin-top: 12px;',
             '}' ]
       )
-      t.end()
+      t.end();
     })
+
+	test('\n don\'t namespace @fontface', function (t) {
+	 	fs.createReadStream(path.join(fixtures, 'fontface.css'), 'utf8')
+			.on('error', fail.bind(t))
+			.pipe(namespace({ selector: '.jsdoc' }))
+			.on('error', fail.bind(t))
+			.on('data', function (d) { data += d })
+			.on('end', function () {
+				inspect(data);
+     		t.deepEqual(data
+        , '@fontface {}');
+			});
+		t.end();
+	});
 })
