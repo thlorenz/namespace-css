@@ -145,17 +145,17 @@ test('\nmultiple rules', function (t) {
       t.end();
     })
 
-	test('\n don\'t namespace @fontface', function (t) {
-	 	fs.createReadStream(path.join(fixtures, 'fontface.css'), 'utf8')
-			.on('error', fail.bind(t))
-			.pipe(namespace({ selector: '.jsdoc' }))
-			.on('error', fail.bind(t))
-			.on('data', function (d) { data += d })
-			.on('end', function () {
-				inspect(data);
-     		t.deepEqual(data
+  test('\n don\'t namespace @fontface', function (t) {
+    fs.createReadStream(path.join(fixtures, 'fontface.css'), 'utf8')
+      .on('error', fail.bind(t))
+      .pipe(namespace({ selector: '.jsdoc' }))
+      .on('error', fail.bind(t))
+      .on('data', function (d) { data += d })
+      .on('end', function () {
+        inspect(data);
+        t.deepEqual(data
         , '@fontface {}');
-			});
-		t.end();
-	});
+      });
+    t.end();
+  });
 })
